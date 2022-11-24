@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Entry Page Project',
       theme: ThemeData(
-        primaryColor: Colors.red,
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-            .copyWith(secondary: Colors.black45),
+        primaryColor: Colors.purple,
+        //colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+        //.copyWith(secondary: Colors.black45), now that i learned it...
       ),
       home: EnrtyPage(),
     );
