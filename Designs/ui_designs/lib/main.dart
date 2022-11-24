@@ -53,11 +53,17 @@ class EnrtyPage extends StatelessWidget {
             height: 25.0,
           ),
           Container(
+            padding: EdgeInsets.all(10.0),
             width: MediaQuery.of(context).size.width / 1.5,
             height: MediaQuery.of(context).size.height / 3.5,
             color: Colors.white,
-            alignment: Alignment.topCenter,
-            child: const Text("abc"),
+            alignment: Alignment.topLeft,
+            child: Container(
+              width: 100.0,
+              height: 100.0,
+              color: Colors.red,
+              margin: EdgeInsets.all(10.0),
+            ),
           )
         ]),
       ),
