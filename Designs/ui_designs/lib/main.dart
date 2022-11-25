@@ -35,9 +35,11 @@ class EnrtyPage extends StatelessWidget {
           SizedBox(
             height: 40.0,
           ),
-          FlutterLogo(
-            size: 70.0,
-            textColor: Color.fromARGB(17, 158, 158, 158),
+          Container(
+            width: 120.0,
+            height: 120.0,
+            decoration: const BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/vader.png"))),
           ),
           SizedBox(
             height: 20.0,
@@ -78,7 +80,7 @@ class EnrtyPage extends StatelessWidget {
                         width: double.infinity,
                         height: 40.0,
                         decoration: BoxDecoration(
-                            color: Colors.pinkAccent,
+                            color: Color.fromRGBO(100, 20, 30, 0.5),
                             borderRadius: BorderRadius.circular(20.0)),
                         alignment: Alignment.center,
                         child: Text(
