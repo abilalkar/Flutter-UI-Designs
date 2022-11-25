@@ -1,6 +1,6 @@
 # ui_designs
 
-A new Flutter project.
+A new Flutter project, done when learning.
 
 ## Getting Started
 
