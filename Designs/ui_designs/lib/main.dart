@@ -32,7 +32,7 @@ class EnrtyPage extends StatelessWidget {
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
         child: Column(children: <Widget>[
-          SizedBox(
+          const SizedBox(
             height: 40.0,
           ),
           Container(
@@ -41,17 +41,17 @@ class EnrtyPage extends StatelessWidget {
             decoration: const BoxDecoration(
                 image: DecorationImage(image: AssetImage("assets/vader.png"))),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20.0,
           ),
-          Text(
+          const Text(
             "Flutter Team",
             style: TextStyle(
                 color: Colors.white,
                 fontSize: 30.0,
                 fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25.0,
           ),
           Material(
@@ -80,10 +80,10 @@ class EnrtyPage extends StatelessWidget {
                         width: double.infinity,
                         height: 40.0,
                         decoration: BoxDecoration(
-                            color: Color.fromRGBO(100, 20, 30, 0.5),
+                            color: const Color.fromRGBO(100, 20, 30, 0.5),
                             borderRadius: BorderRadius.circular(20.0)),
                         alignment: Alignment.center,
-                        child: Text(
+                        child: const Text(
                           "Sign up with mail",
                           style: TextStyle(
                               fontSize: 18.0,
@@ -103,7 +103,7 @@ class EnrtyPage extends StatelessWidget {
                                 color: Colors.indigo,
                                 borderRadius: BorderRadius.circular(20.0)),
                             alignment: Alignment.center,
-                            child: Text(
+                            child: const Text(
                               "Facebook",
                               style: TextStyle(
                                   fontSize: 18.0,
@@ -112,7 +112,7 @@ class EnrtyPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 10.0,
                         ),
                         Expanded(
@@ -123,7 +123,7 @@ class EnrtyPage extends StatelessWidget {
                                 color: Colors.orangeAccent,
                                 borderRadius: BorderRadius.circular(20.0)),
                             alignment: Alignment.center,
-                            child: Text(
+                            child: const Text(
                               "Google",
                               style: TextStyle(
                                   fontSize: 18.0,
