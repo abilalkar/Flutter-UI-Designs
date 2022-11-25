@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Lets see where we are going to see this title',
       theme: ThemeData(
         // This is the theme of your application.
@@ -24,11 +25,47 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-          appBar: AppBar(),
-          body: const Center(
-            child: Text("Hello"),
-          )),
+      home: const MainScreen(),
+    );
+  }
+}
+
+class MainScreen extends StatelessWidget {
+  const MainScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.grey[100],
+      appBar: AppBar(
+        backgroundColor: Colors.grey.shade400,
+        elevation: 0,
+        leading: IconButton(
+            icon: Icon(
+              Icons.menu,
+              color: Colors.grey[10],
+              size: 30.0,
+            ),
+            onPressed: () {}),
+        title: Text(
+          "Social Network",
+          style: TextStyle(
+              fontSize: 17.0,
+              fontWeight: FontWeight.w600,
+              color: Colors.grey.shade800),
+        ),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.notifications,
+              color: Color.fromARGB(255, 92, 126, 156),
+              size: 30.0,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
