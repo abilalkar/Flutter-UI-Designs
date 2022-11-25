@@ -62,19 +62,74 @@ class EnrtyPage extends StatelessWidget {
                       Colors.purple.shade100,
                     ]),
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(10.0)),
+                borderRadius: BorderRadius.circular(20.0)),
             width: MediaQuery.of(context).size.width / 1.5,
-            height: MediaQuery.of(context).size.height / 3.5,
+            height: MediaQuery.of(context).size.height / 4.5,
             alignment: Alignment.center,
-            child: Column(children: <Widget>[
-              Text(
-                "Entry with mail",
-              ),
-              Row(children: <Widget>[
-                Text("Google button"),
-                Text("Facebook button"),
-              ]),
-            ]),
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      width: double.infinity,
+                      height: 40.0,
+                      decoration: BoxDecoration(
+                          color: Colors.pinkAccent,
+                          borderRadius: BorderRadius.circular(20.0)),
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Sign up with mail",
+                        style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(6.0),
+                    child: Row(children: <Widget>[
+                      Expanded(
+                        child: Container(
+                          //width: 100.0,
+                          height: 40.0,
+                          decoration: BoxDecoration(
+                              color: Colors.indigo,
+                              borderRadius: BorderRadius.circular(20.0)),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Facebook",
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.0,
+                      ),
+                      Expanded(
+                        child: Container(
+                          //width: 100.0,
+                          height: 40.0,
+                          decoration: BoxDecoration(
+                              color: Colors.orangeAccent,
+                              borderRadius: BorderRadius.circular(20.0)),
+                          alignment: Alignment.center,
+                          child: Text(
+                            "Google",
+                            style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ]),
+                  ),
+                ]),
           )
         ]),
       ),
