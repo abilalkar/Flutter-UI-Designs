@@ -52,84 +52,88 @@ class EnrtyPage extends StatelessWidget {
           SizedBox(
             height: 25.0,
           ),
-          Container(
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Colors.purple.shade300,
-                      Colors.purple.shade100,
-                    ]),
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20.0)),
-            width: MediaQuery.of(context).size.width / 1.5,
-            height: MediaQuery.of(context).size.height / 4.5,
-            alignment: Alignment.center,
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Container(
-                      width: double.infinity,
-                      height: 40.0,
-                      decoration: BoxDecoration(
-                          color: Colors.pinkAccent,
-                          borderRadius: BorderRadius.circular(20.0)),
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Sign up with mail",
-                        style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
+          Material(
+            borderRadius: BorderRadius.circular(20.0),
+            elevation: 7.0,
+            child: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Colors.purple.shade300,
+                        Colors.purple.shade100,
+                      ]),
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20.0)),
+              width: MediaQuery.of(context).size.width / 1.5,
+              height: MediaQuery.of(context).size.height / 4.5,
+              alignment: Alignment.center,
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Container(
+                        width: double.infinity,
+                        height: 40.0,
+                        decoration: BoxDecoration(
+                            color: Colors.pinkAccent,
+                            borderRadius: BorderRadius.circular(20.0)),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Sign up with mail",
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Row(children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          //width: 100.0,
-                          height: 40.0,
-                          decoration: BoxDecoration(
-                              color: Colors.indigo,
-                              borderRadius: BorderRadius.circular(20.0)),
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Facebook",
-                            style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                    Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Row(children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            //width: 100.0,
+                            height: 40.0,
+                            decoration: BoxDecoration(
+                                color: Colors.indigo,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Facebook",
+                              style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                        width: 10.0,
-                      ),
-                      Expanded(
-                        child: Container(
-                          //width: 100.0,
-                          height: 40.0,
-                          decoration: BoxDecoration(
-                              color: Colors.orangeAccent,
-                              borderRadius: BorderRadius.circular(20.0)),
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Google",
-                            style: TextStyle(
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Expanded(
+                          child: Container(
+                            //width: 100.0,
+                            height: 40.0,
+                            decoration: BoxDecoration(
+                                color: Colors.orangeAccent,
+                                borderRadius: BorderRadius.circular(20.0)),
+                            alignment: Alignment.center,
+                            child: Text(
+                              "Google",
+                              style: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            ),
                           ),
                         ),
-                      ),
-                    ]),
-                  ),
-                ]),
+                      ]),
+                    ),
+                  ]),
+            ),
           )
         ]),
       ),
