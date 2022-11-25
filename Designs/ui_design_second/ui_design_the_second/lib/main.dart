@@ -66,6 +66,35 @@ class MainScreen extends StatelessWidget {
           )
         ],
       ),
+      body: ListView(
+        children: [
+          Container(
+            height: 80.0,
+            color: Colors.grey[300],
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      width: 60.0,
+                      height: 60.0,
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          border: Border.all(width: 2.0, color: Colors.grey),
+                          borderRadius: BorderRadius.circular(100.0)),
+                    ),
+                    const Text(
+                      "Username",
+                      style: TextStyle(fontSize: 12.0, color: Colors.black),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
