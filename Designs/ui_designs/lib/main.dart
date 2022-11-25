@@ -65,7 +65,16 @@ class EnrtyPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10.0)),
             width: MediaQuery.of(context).size.width / 1.5,
             height: MediaQuery.of(context).size.height / 3.5,
-            alignment: Alignment.topLeft,
+            alignment: Alignment.center,
+            child: Column(children: <Widget>[
+              Text(
+                "Entry with mail",
+              ),
+              Row(children: <Widget>[
+                Text("Google button"),
+                Text("Facebook button"),
+              ]),
+            ]),
           )
         ]),
       ),
