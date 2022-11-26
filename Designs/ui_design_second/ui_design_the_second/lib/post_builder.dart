@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PostBuilder extends StatelessWidget {
+  const PostBuilder({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -70,7 +72,7 @@ class PostBuilder extends StatelessWidget {
             Image.network(
               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sheep_skin_for_sale.jpg/375px-Sheep_skin_for_sale.jpg",
               width: double.infinity,
-              height: 220.0,
+              height: 100.0,
               fit: BoxFit.cover,
             ),
             /*const SizedBox(
@@ -85,9 +87,23 @@ class PostBuilder extends StatelessWidget {
                 BelowButtonWidget(
                   Icons.comment,
                 ),
-                BelowButtonWidget(
-                  Icons.share,
-                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.share),
+                          color: Color.fromARGB(255, 72, 121, 76),
+                        ),
+                        Text(
+                          "Share",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey[500]),
+                        ),
+                      ],
+                    ))
               ],
             )
           ]),
@@ -99,7 +115,7 @@ class PostBuilder extends StatelessWidget {
 
 class BelowButtonWidget extends StatelessWidget {
   String widgetText = "Like";
-  Color widgetColor = Color.fromARGB(255, 151, 83, 83);
+  Color widgetColor = const Color.fromARGB(255, 151, 83, 83);
   IconData myWidgetIcon;
 
   BelowButtonWidget(this.myWidgetIcon, {super.key});
@@ -108,15 +124,16 @@ class BelowButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (myWidgetIcon == Icons.comment) {
       widgetText = "Comment";
-      widgetColor = Color.fromARGB(255, 56, 76, 92);
+      widgetColor = const Color.fromARGB(255, 56, 76, 92);
     } else if (myWidgetIcon == Icons.favorite) {
       widgetText = "Like";
-      widgetColor = Color.fromARGB(255, 151, 83, 83);
+      widgetColor = const Color.fromARGB(255, 151, 83, 83);
     } else {
       widgetText = "Share";
-      widgetColor = Color.fromARGB(255, 73, 105, 74);
+      widgetColor = const Color.fromARGB(255, 73, 105, 74);
     }
     return Material(
+      color: Colors.white,
       child: InkWell(
         onTap: (() => {}),
         child: Container(
