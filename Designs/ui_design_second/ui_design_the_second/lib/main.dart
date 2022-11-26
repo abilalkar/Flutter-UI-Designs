@@ -72,26 +72,52 @@ class MainScreen extends StatelessWidget {
             height: 80.0,
             color: Colors.grey[300],
             child: ListView(
+              physics:
+                  const AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
               scrollDirection: Axis.horizontal,
               children: [
-                Column(
-                  children: [
-                    Container(
-                      width: 60.0,
-                      height: 60.0,
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          border: Border.all(width: 2.0, color: Colors.grey),
-                          borderRadius: BorderRadius.circular(100.0)),
-                    ),
-                    const Text(
-                      "Username",
-                      style: TextStyle(fontSize: 12.0, color: Colors.black),
-                    )
-                  ],
-                ),
+                Column(),
+                storyBarBuilder("vader"),
+                storyBarBuilder("username1"),
+                storyBarBuilder("obi wan"),
+                storyBarBuilder("username3"),
+                storyBarBuilder("username4"),
+                storyBarBuilder("username5"),
+                storyBarBuilder("username6"),
               ],
             ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget storyBarBuilder(String userName) {
+    String imageURL = "https://www.computerhope.com/jargon/g/guest-user.png";
+    if (userName == "vader") {
+      imageURL =
+          "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg";
+    } else if (userName == "obi wan") {
+      imageURL =
+          "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432";
+    }
+    return Padding(
+      padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 3.0),
+      child: Column(
+        children: <Widget>[
+          Container(
+            width: 60.0,
+            height: 60.0,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    fit: BoxFit.cover, image: NetworkImage(imageURL)),
+                color: Colors.white,
+                border: Border.all(width: 2.0, color: Colors.grey),
+                borderRadius: BorderRadius.circular(100.0)),
+          ),
+          Text(
+            userName,
+            style: const TextStyle(fontSize: 12.0, color: Colors.black),
           )
         ],
       ),
