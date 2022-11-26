@@ -72,6 +72,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                       BackButton(
                         onPressed: () => Navigator.pop(context),
+                        color: Colors.white,
                       ),
                     ],
                   ),
