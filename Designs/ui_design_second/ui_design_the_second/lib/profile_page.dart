@@ -38,15 +38,18 @@ class ProfilePage extends StatelessWidget {
                 Positioned(
                   left: 20.0,
                   top: 120.0,
-                  child: Container(
-                    width: 80.0,
-                    height: 80.0,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage(pPLink), fit: BoxFit.cover),
-                        color: Colors.lightBlue,
-                        borderRadius: BorderRadius.circular(100.0),
-                        border: Border.all(width: 2.0, color: Colors.white)),
+                  child: Hero(
+                    tag: username,
+                    child: Container(
+                      width: 80.0,
+                      height: 80.0,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: NetworkImage(pPLink), fit: BoxFit.cover),
+                          color: Colors.lightBlue,
+                          borderRadius: BorderRadius.circular(100.0),
+                          border: Border.all(width: 2.0, color: Colors.white)),
+                    ),
                   ),
                 ),
                 Positioned(
@@ -57,14 +60,14 @@ class ProfilePage extends StatelessWidget {
                     children: [
                       Text(
                         "$name $surName",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.black,
                             fontSize: 16.0,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         "@$username",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.black87,
                             fontSize: 14.0,
                             fontWeight: FontWeight.normal),
@@ -72,19 +75,17 @@ class ProfilePage extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  child: Row(
-                    children: [
-                      SizedBox(
-                        width: 10.0,
-                        height: 60.0,
-                      ),
-                      BackButton(
-                        onPressed: () => Navigator.pop(context),
-                        color: Colors.white,
-                      ),
-                    ],
-                  ),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 10.0,
+                      height: 60.0,
+                    ),
+                    BackButton(
+                      onPressed: () => Navigator.pop(context),
+                      color: Colors.white,
+                    ),
+                  ],
                 ),
                 Positioned(
                   top: 125.0,
@@ -98,17 +99,17 @@ class ProfilePage extends StatelessWidget {
                       border: Border.all(width: 2.0, color: Colors.white),
                     ),
                     child: Row(children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 5.0,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.add_circle,
                         size: 20,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5.0,
                       ),
-                      Text(
+                      const Text(
                         "Follow",
                         style: TextStyle(
                             color: Colors.black,
@@ -120,7 +121,7 @@ class ProfilePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20.0,
             ),
             Container(
@@ -164,15 +165,15 @@ class ProfilePage extends StatelessWidget {
       children: [
         Text(
           number,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black, fontSize: 18.0, fontWeight: FontWeight.bold),
         ),
-        SizedBox(
+        const SizedBox(
           height: 4.0,
         ),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
               color: Colors.black,
               fontSize: 14.0,
               fontWeight: FontWeight.normal),

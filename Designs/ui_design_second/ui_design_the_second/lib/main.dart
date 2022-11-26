@@ -64,7 +64,28 @@ class _MainScreenState extends State<MainScreen> {
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Column(
+                      children: [
+                        notificationBuilder(
+                          "Abidin Oğuzhan Zeybek followed you.",
+                          "1 min ago.",
+                        ),
+                        notificationBuilder(
+                          "Oğuzhan Şenusal Zeybek followed you.",
+                          "15 mins ago.",
+                        ),
+                        notificationBuilder(
+                          "Bilal Kar shared a post.",
+                          "1 hour ago.",
+                        )
+                      ],
+                    );
+                  });
+            },
             icon: const Icon(
               Icons.notifications,
               color: Color.fromARGB(255, 92, 126, 156),
@@ -161,6 +182,33 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Color.fromARGB(255, 177, 164, 135),
+        child: Icon(
+          Icons.add_a_photo,
+          color: Colors.white,
+        ),
+      ),
+    );
+  }
+
+  Padding notificationBuilder(String textInfo, String timeInfo) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 12.0, left: 10.0, right: 10.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            textInfo,
+            style: TextStyle(fontSize: 14.0),
+          ),
+          Text(
+            timeInfo,
+            style: TextStyle(fontSize: 14.0, color: Colors.grey),
+          )
+        ],
+      ),
     );
   }
 
@@ -192,15 +240,18 @@ class _MainScreenState extends State<MainScreen> {
               Stack(
                 alignment: AlignmentDirectional.topEnd,
                 children: [
-                  Container(
-                    width: 60.0,
-                    height: 60.0,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            fit: BoxFit.cover, image: NetworkImage(imageURL)),
-                        color: Colors.white,
-                        border: Border.all(width: 2.0, color: Colors.grey),
-                        borderRadius: BorderRadius.circular(100.0)),
+                  Hero(
+                    tag: userName,
+                    child: Container(
+                      width: 60.0,
+                      height: 60.0,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.cover, image: NetworkImage(imageURL)),
+                          color: Colors.white,
+                          border: Border.all(width: 2.0, color: Colors.grey),
+                          borderRadius: BorderRadius.circular(100.0)),
+                    ),
                   ),
                   Container(
                     width: 15.0,
