@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_design_the_second/post_builder.dart';
+import 'package:ui_design_the_second/profile_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -191,17 +192,5 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
     );
-  }
-}
-
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Text("Profile Page"),
-    ));
   }
 }
