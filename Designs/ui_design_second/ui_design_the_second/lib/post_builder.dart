@@ -1,17 +1,31 @@
 import 'package:flutter/material.dart';
 
 class PostBuilder extends StatelessWidget {
-  const PostBuilder({super.key});
+  final String pPLink;
+  final String name;
+  final String surName;
+  final String timePassed;
+  final String postLink;
+  final String description;
+
+  PostBuilder(
+      {super.key,
+      required this.pPLink,
+      required this.name,
+      required this.surName,
+      required this.timePassed,
+      required this.postLink,
+      required this.description});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: EdgeInsets.all(12.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           width: double.infinity,
           height: 350.0,
           decoration: BoxDecoration(
@@ -29,53 +43,51 @@ class PostBuilder extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100.0),
                         color: Colors.black,
-                        image: const DecorationImage(
-                            image: NetworkImage(
-                                "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg"),
-                            fit: BoxFit.cover),
+                        image: DecorationImage(
+                            image: NetworkImage(pPLink), fit: BoxFit.cover),
                       ),
                     ),
-                    const SizedBox(
+                    SizedBox(
                       width: 10.0,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
-                        Text("Darth Vader",
+                      children: [
+                        Text(name + " " + surName,
                             style: TextStyle(
                                 fontSize: 13.0,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black)),
                         Text(
-                          "1 hour ago",
+                          timePassed,
                           style: TextStyle(color: Colors.grey, fontSize: 12.0),
                         )
                       ],
                     ),
                   ],
                 ),
-                const Icon(
+                Icon(
                   Icons.more_vert,
                 ),
               ],
             ),
-            const SizedBox(
-              height: 10.0,
+            SizedBox(
+              height: 8.0,
             ),
-            const Text(
-              "Image description",
-              style: TextStyle(color: Colors.black, fontSize: 12.0),
+            Text(
+              description,
+              style: TextStyle(color: Colors.black, fontSize: 14.0),
             ),
-            const SizedBox(
-              height: 10.0,
+            SizedBox(
+              height: 8.0,
             ),
             Image.network(
-              "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sheep_skin_for_sale.jpg/375px-Sheep_skin_for_sale.jpg",
+              postLink,
               width: double.infinity,
-              height: 100.0,
+              height: 214.0,
               fit: BoxFit.cover,
             ),
-            /*const SizedBox(
+            /*  SizedBox(
               height: 10.0,
             ),*/
             Row(
@@ -115,7 +127,7 @@ class PostBuilder extends StatelessWidget {
 
 class BelowButtonWidget extends StatelessWidget {
   String widgetText = "Like";
-  Color widgetColor = const Color.fromARGB(255, 151, 83, 83);
+  Color widgetColor = Color.fromARGB(255, 151, 83, 83);
   IconData myWidgetIcon;
 
   BelowButtonWidget(this.myWidgetIcon, {super.key});
@@ -124,26 +136,26 @@ class BelowButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (myWidgetIcon == Icons.comment) {
       widgetText = "Comment";
-      widgetColor = const Color.fromARGB(255, 56, 76, 92);
+      widgetColor = Color.fromARGB(255, 56, 76, 92);
     } else if (myWidgetIcon == Icons.favorite) {
       widgetText = "Like";
-      widgetColor = const Color.fromARGB(255, 151, 83, 83);
+      widgetColor = Color.fromARGB(255, 151, 83, 83);
     } else {
       widgetText = "Share";
-      widgetColor = const Color.fromARGB(255, 73, 105, 74);
+      widgetColor = Color.fromARGB(255, 73, 105, 74);
     }
     return Material(
       color: Colors.white,
       child: InkWell(
         onTap: (() => {}),
         child: Container(
-          padding: const EdgeInsets.all(5.0),
+          padding: EdgeInsets.all(5.0),
           child: Row(children: [
             Icon(
               myWidgetIcon,
               color: widgetColor,
             ),
-            const SizedBox(
+            SizedBox(
               width: 3.0,
             ),
             Text(

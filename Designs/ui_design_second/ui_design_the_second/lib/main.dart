@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:ui_design_the_second/post_builder.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -26,13 +26,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MainScreen(),
+      home: MainScreen(),
     );
   }
 }
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key});
+  MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class MainScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
               Icons.notifications,
               color: Color.fromARGB(255, 92, 126, 156),
               size: 30.0,
@@ -70,18 +70,14 @@ class MainScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            decoration: BoxDecoration(
-                color: Colors.grey[300],
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.grey,
-                      offset: Offset(0.0, 3.0),
-                      blurRadius: 5.0)
-                ]),
+            decoration: BoxDecoration(color: Colors.grey[300], boxShadow: [
+              BoxShadow(
+                  color: Colors.grey, offset: Offset(0.0, 3.0), blurRadius: 5.0)
+            ]),
             height: 85.0,
             child: ListView(
               physics:
-                  const AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
+                  AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
               scrollDirection: Axis.horizontal,
               children: [
                 Column(),
@@ -89,17 +85,35 @@ class MainScreen extends StatelessWidget {
                 storyBarBuilder("username1"),
                 storyBarBuilder("obi wan"),
                 storyBarBuilder("username3"),
-                storyBarBuilder("username4"),
+                storyBarBuilder("bilal"),
                 storyBarBuilder("username5"),
                 storyBarBuilder("username6"),
               ],
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 10.0,
           ),
-          const PostBuilder(),
-          const PostBuilder()
+          PostBuilder(
+            pPLink:
+                "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432",
+            name: "Obi Wan",
+            surName: "Kenobi",
+            postLink:
+                "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg",
+            timePassed: "3 hours ago",
+            description: "eheh",
+          ),
+          PostBuilder(
+            pPLink:
+                "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg",
+            name: "Darth",
+            surName: "Vader",
+            postLink:
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sheep_skin_for_sale.jpg/375px-Sheep_skin_for_sale.jpg",
+            timePassed: "2 hours ago",
+            description: "post",
+          ),
         ],
       ),
     );
@@ -122,7 +136,7 @@ class MainScreen extends StatelessWidget {
       activeColor = Colors.green;
     }
     return Padding(
-      padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
+      padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
       child: Column(
         children: <Widget>[
           Stack(
@@ -148,12 +162,12 @@ class MainScreen extends StatelessWidget {
               )
             ],
           ),
-          const SizedBox(
+          SizedBox(
             height: 2.0,
           ),
           Text(
             userName,
-            style: const TextStyle(fontSize: 12.0, color: Colors.black),
+            style: TextStyle(fontSize: 12.0, color: Colors.black),
           )
         ],
       ),
