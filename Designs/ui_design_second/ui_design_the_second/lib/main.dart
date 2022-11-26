@@ -91,13 +91,48 @@ class _MainScreenState extends State<MainScreen> {
               scrollDirection: Axis.horizontal,
               children: [
                 Column(),
-                storyBarBuilder("vader"),
-                storyBarBuilder("username1"),
-                storyBarBuilder("obi wan"),
-                storyBarBuilder("username3"),
-                storyBarBuilder("bilal"),
-                storyBarBuilder("username5"),
-                storyBarBuilder("username6"),
+                storyBarBuilder(
+                    "vader",
+                    "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg",
+                    true,
+                    "https://cdn.pixabay.com/photo/2016/12/21/00/36/woman-1921883_960_720.jpg",
+                    "Darth",
+                    "Vader"),
+                storyBarBuilder(
+                    "osenuysal",
+                    "https://media-exp1.licdn.com/dms/image/C4D03AQH18j3jX1CHQw/profile-displayphoto-shrink_800_800/0/1636666394118?e=1674691200&v=beta&t=3q6BmfOkVMmnodEZlrbtsaU_zMvWc41j6r7dsDdfzWA",
+                    true,
+                    "https://cdn.pixabay.com/photo/2018/09/30/16/26/sun-3713835_960_720.jpg",
+                    "Oğuzhan",
+                    "Şenuysal"),
+                storyBarBuilder(
+                    "obi wan",
+                    "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432",
+                    false,
+                    "https://upload.wikimedia.org/wikipedia/tr/thumb/0/0f/Obi-Wan_Kenobi.png/330px-Obi-Wan_Kenobi.png",
+                    "Obi Wan",
+                    "Kenobi"),
+                storyBarBuilder(
+                    "zebyek",
+                    "https://static.daktilo.com/sites/827/uploads/2015/05/12/31433-0.jpg",
+                    false,
+                    "https://cdn.pixabay.com/photo/2017/06/12/18/35/race-2396398_960_720.jpg",
+                    "Abidin Oğuzhan",
+                    "Zeybek"),
+                storyBarBuilder(
+                    "bilal",
+                    "https://static.daktilo.com/sites/827/uploads/2020/07/03/113136-2.jpg",
+                    true,
+                    "https://cdn.pixabay.com/photo/2019/09/12/13/29/sunset-4471603_960_720.jpg",
+                    "Bilal",
+                    "Kar"),
+                storyBarBuilder(
+                    "tkozan",
+                    "https://karaman.meb.gov.tr/meb_iys_dosyalar/2015_06/05180805_img_0606.jpg",
+                    false,
+                    "https://cdn.pixabay.com/photo/2020/03/18/13/02/nature-4943937_960_720.jpg",
+                    "Tunahan",
+                    "Kozan"),
               ],
             ),
           ),
@@ -110,7 +145,7 @@ class _MainScreenState extends State<MainScreen> {
             name: "Obi Wan",
             surName: "Kenobi",
             postLink:
-                "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg",
+                "https://static.daktilo.com/sites/827/uploads/2015/05/12/31433-0.jpg",
             timePassed: "3 hours ago",
             description: "eheh",
           ),
@@ -129,19 +164,10 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget storyBarBuilder(String userName) {
-    bool isActive = false;
+  Widget storyBarBuilder(String userName, String imageURL, bool isActive,
+      String coverURL, String name, String surName) {
     Color? activeColor = Colors.grey[300];
-    String imageURL = "https://www.computerhope.com/jargon/g/guest-user.png";
-    if (userName == "vader") {
-      imageURL =
-          "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg";
-      isActive = true;
-    } else if (userName == "obi wan") {
-      imageURL =
-          "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432";
-      isActive = true;
-    }
+
     if (isActive) {
       activeColor = Colors.green;
     }
@@ -151,7 +177,13 @@ class _MainScreenState extends State<MainScreen> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (BuildContext context) => ProfilePage()));
+                  builder: (BuildContext context) => ProfilePage(
+                        coverLink: coverURL,
+                        name: name,
+                        surName: surName,
+                        pPLink: imageURL,
+                        username: userName,
+                      )));
         },
         child: Padding(
           padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
