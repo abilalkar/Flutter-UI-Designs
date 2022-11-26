@@ -105,15 +105,31 @@ class MainScreen extends StatelessWidget {
       padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 3.0),
       child: Column(
         children: <Widget>[
-          Container(
-            width: 60.0,
-            height: 60.0,
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover, image: NetworkImage(imageURL)),
-                color: Colors.white,
-                border: Border.all(width: 2.0, color: Colors.grey),
-                borderRadius: BorderRadius.circular(100.0)),
+          Stack(
+            alignment: AlignmentDirectional.topEnd,
+            children: [
+              Container(
+                width: 60.0,
+                height: 60.0,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover, image: NetworkImage(imageURL)),
+                    color: Colors.white,
+                    border: Border.all(width: 2.0, color: Colors.grey),
+                    borderRadius: BorderRadius.circular(100.0)),
+              ),
+              Container(
+                width: 15.0,
+                height: 15.0,
+                decoration: BoxDecoration(
+                    color: Colors.green[500],
+                    border: Border.all(width: 1.0, color: Colors.white),
+                    borderRadius: BorderRadius.circular(100.0)),
+              )
+            ],
+          ),
+          const SizedBox(
+            height: 0.5,
           ),
           Text(
             userName,
