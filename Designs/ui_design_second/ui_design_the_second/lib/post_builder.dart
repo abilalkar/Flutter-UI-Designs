@@ -8,7 +8,7 @@ class PostBuilder extends StatelessWidget {
   final String postLink;
   final String description;
 
-  PostBuilder(
+  const PostBuilder(
       {super.key,
       required this.pPLink,
       required this.name,
@@ -20,12 +20,12 @@ class PostBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(12.0),
       child: Material(
         elevation: 5.0,
         borderRadius: BorderRadius.circular(10.0),
         child: Container(
-          padding: EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(10.0),
           width: double.infinity,
           height: 350.0,
           decoration: BoxDecoration(
@@ -47,38 +47,42 @@ class PostBuilder extends StatelessWidget {
                             image: NetworkImage(pPLink), fit: BoxFit.cover),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(name + " " + surName,
-                            style: TextStyle(
-                                fontSize: 13.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)),
+                        Text(
+                          "$name $surName",
+                          style: const TextStyle(
+                            fontSize: 13.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                        ),
                         Text(
                           timePassed,
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
+                          style: const TextStyle(
+                              color: Colors.grey, fontSize: 12.0),
                         )
                       ],
                     ),
                   ],
                 ),
-                Icon(
+                const Icon(
                   Icons.more_vert,
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Text(
               description,
-              style: TextStyle(color: Colors.black, fontSize: 14.0),
+              style: const TextStyle(color: Colors.black, fontSize: 14.0),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8.0,
             ),
             Image.network(
@@ -105,8 +109,8 @@ class PostBuilder extends StatelessWidget {
                       children: [
                         IconButton(
                           onPressed: () {},
-                          icon: Icon(Icons.share),
-                          color: Color.fromARGB(255, 72, 121, 76),
+                          icon: const Icon(Icons.share),
+                          color: const Color.fromARGB(255, 72, 121, 76),
                         ),
                         Text(
                           "Share",
@@ -127,7 +131,7 @@ class PostBuilder extends StatelessWidget {
 
 class BelowButtonWidget extends StatelessWidget {
   String widgetText = "Like";
-  Color widgetColor = Color.fromARGB(255, 151, 83, 83);
+  Color widgetColor = const Color.fromARGB(255, 151, 83, 83);
   IconData myWidgetIcon;
 
   BelowButtonWidget(this.myWidgetIcon, {super.key});
@@ -136,26 +140,26 @@ class BelowButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (myWidgetIcon == Icons.comment) {
       widgetText = "Comment";
-      widgetColor = Color.fromARGB(255, 56, 76, 92);
+      widgetColor = const Color.fromARGB(255, 56, 76, 92);
     } else if (myWidgetIcon == Icons.favorite) {
       widgetText = "Like";
-      widgetColor = Color.fromARGB(255, 151, 83, 83);
+      widgetColor = const Color.fromARGB(255, 151, 83, 83);
     } else {
       widgetText = "Share";
-      widgetColor = Color.fromARGB(255, 73, 105, 74);
+      widgetColor = const Color.fromARGB(255, 73, 105, 74);
     }
     return Material(
       color: Colors.white,
       child: InkWell(
         onTap: (() => {}),
         child: Container(
-          padding: EdgeInsets.all(5.0),
+          padding: const EdgeInsets.all(5.0),
           child: Row(children: [
             Icon(
               myWidgetIcon,
               color: widgetColor,
             ),
-            SizedBox(
+            const SizedBox(
               width: 3.0,
             ),
             Text(
@@ -167,5 +171,17 @@ class BelowButtonWidget extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+      child: Text("Profile Page"),
+    ));
   }
 }

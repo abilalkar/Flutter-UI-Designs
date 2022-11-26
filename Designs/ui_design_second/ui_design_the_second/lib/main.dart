@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:ui_design_the_second/post_builder.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -26,14 +26,19 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MainScreen(),
+      home: const MainScreen(),
     );
   }
 }
 
-class MainScreen extends StatelessWidget {
-  MainScreen({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
+  @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +64,7 @@ class MainScreen extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.notifications,
               color: Color.fromARGB(255, 92, 126, 156),
               size: 30.0,
@@ -70,14 +75,18 @@ class MainScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.grey[300], boxShadow: [
-              BoxShadow(
-                  color: Colors.grey, offset: Offset(0.0, 3.0), blurRadius: 5.0)
-            ]),
+            decoration: BoxDecoration(
+                color: Colors.grey[300],
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 3.0),
+                      blurRadius: 5.0)
+                ]),
             height: 85.0,
             child: ListView(
               physics:
-                  AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
+                  const AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
               scrollDirection: Axis.horizontal,
               children: [
                 Column(),
@@ -91,10 +100,10 @@ class MainScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
-          PostBuilder(
+          const PostBuilder(
             pPLink:
                 "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432",
             name: "Obi Wan",
@@ -104,7 +113,7 @@ class MainScreen extends StatelessWidget {
             timePassed: "3 hours ago",
             description: "eheh",
           ),
-          PostBuilder(
+          const PostBuilder(
             pPLink:
                 "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg",
             name: "Darth",
@@ -135,42 +144,64 @@ class MainScreen extends StatelessWidget {
     if (isActive) {
       activeColor = Colors.green;
     }
-    return Padding(
-      padding: EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
-      child: Column(
-        children: <Widget>[
-          Stack(
-            alignment: AlignmentDirectional.topEnd,
-            children: [
-              Container(
-                width: 60.0,
-                height: 60.0,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        fit: BoxFit.cover, image: NetworkImage(imageURL)),
-                    color: Colors.white,
-                    border: Border.all(width: 2.0, color: Colors.grey),
-                    borderRadius: BorderRadius.circular(100.0)),
+    return Material(
+      child: InkWell(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (BuildContext context) => ProfilePage()));
+        },
+        child: Padding(
+          padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
+          child: Column(
+            children: <Widget>[
+              Stack(
+                alignment: AlignmentDirectional.topEnd,
+                children: [
+                  Container(
+                    width: 60.0,
+                    height: 60.0,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            fit: BoxFit.cover, image: NetworkImage(imageURL)),
+                        color: Colors.white,
+                        border: Border.all(width: 2.0, color: Colors.grey),
+                        borderRadius: BorderRadius.circular(100.0)),
+                  ),
+                  Container(
+                    width: 15.0,
+                    height: 15.0,
+                    decoration: BoxDecoration(
+                        color: activeColor,
+                        border: Border.all(width: 1.0, color: Colors.white),
+                        borderRadius: BorderRadius.circular(100.0)),
+                  )
+                ],
               ),
-              Container(
-                width: 15.0,
-                height: 15.0,
-                decoration: BoxDecoration(
-                    color: activeColor,
-                    border: Border.all(width: 1.0, color: Colors.white),
-                    borderRadius: BorderRadius.circular(100.0)),
+              const SizedBox(
+                height: 2.0,
+              ),
+              Text(
+                userName,
+                style: const TextStyle(fontSize: 12.0, color: Colors.black),
               )
             ],
           ),
-          SizedBox(
-            height: 2.0,
-          ),
-          Text(
-            userName,
-            style: TextStyle(fontSize: 12.0, color: Colors.black),
-          )
-        ],
+        ),
       ),
     );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: Center(
+      child: Text("Profile Page"),
+    ));
   }
 }
