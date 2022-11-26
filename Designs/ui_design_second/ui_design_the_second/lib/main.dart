@@ -184,8 +184,8 @@ class _MainScreenState extends State<MainScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        backgroundColor: Color.fromARGB(255, 177, 164, 135),
-        child: Icon(
+        backgroundColor: const Color.fromARGB(255, 177, 164, 135),
+        child: const Icon(
           Icons.add_a_photo,
           color: Colors.white,
         ),
@@ -201,11 +201,11 @@ class _MainScreenState extends State<MainScreen> {
         children: [
           Text(
             textInfo,
-            style: TextStyle(fontSize: 14.0),
+            style: const TextStyle(fontSize: 14.0),
           ),
           Text(
             timeInfo,
-            style: TextStyle(fontSize: 14.0, color: Colors.grey),
+            style: const TextStyle(fontSize: 14.0, color: Colors.grey),
           )
         ],
       ),
