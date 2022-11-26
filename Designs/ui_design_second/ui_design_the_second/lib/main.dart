@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design_the_second/post_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -69,8 +70,15 @@ class MainScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            height: 80.0,
-            color: Colors.grey[300],
+            decoration: BoxDecoration(
+                color: Colors.grey[300],
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 3.0),
+                      blurRadius: 5.0)
+                ]),
+            height: 85.0,
             child: ListView(
               physics:
                   const AlwaysScrollableScrollPhysics(), //somehow my storybar is not scrolling, could not fix it rn
@@ -86,23 +94,35 @@ class MainScreen extends StatelessWidget {
                 storyBarBuilder("username6"),
               ],
             ),
-          )
+          ),
+          const SizedBox(
+            height: 10.0,
+          ),
+          PostBuilder(),
+          PostBuilder()
         ],
       ),
     );
   }
 
   Widget storyBarBuilder(String userName) {
+    bool isActive = false;
+    Color? activeColor = Colors.grey[300];
     String imageURL = "https://www.computerhope.com/jargon/g/guest-user.png";
     if (userName == "vader") {
       imageURL =
           "https://www.geekdergi.com/wp-content/uploads/2021/09/Darth-Vader.jpg";
+      isActive = true;
     } else if (userName == "obi wan") {
       imageURL =
           "https://www.denofgeek.com/wp-content/uploads/2019/08/star-wars-obi-wan-kenobi-1-scaled.jpg?resize=768%2C432";
+      isActive = true;
+    }
+    if (isActive) {
+      activeColor = Colors.green;
     }
     return Padding(
-      padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 3.0),
+      padding: const EdgeInsets.only(right: 5.0, left: 5.0, top: 5.0),
       child: Column(
         children: <Widget>[
           Stack(
@@ -122,14 +142,14 @@ class MainScreen extends StatelessWidget {
                 width: 15.0,
                 height: 15.0,
                 decoration: BoxDecoration(
-                    color: Colors.green[500],
+                    color: activeColor,
                     border: Border.all(width: 1.0, color: Colors.white),
                     borderRadius: BorderRadius.circular(100.0)),
               )
             ],
           ),
           const SizedBox(
-            height: 0.5,
+            height: 2.0,
           ),
           Text(
             userName,
