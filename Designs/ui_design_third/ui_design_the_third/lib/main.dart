@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.grey,
+        backgroundColor: Color.fromARGB(255, 104, 114, 128),
         centerTitle: true,
         title: Text(
           "Order Takes It Home",
