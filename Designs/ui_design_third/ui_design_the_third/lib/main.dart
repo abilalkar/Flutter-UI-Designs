@@ -63,6 +63,56 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       body: _contents[activeContentNo],
+      drawer: Drawer(
+        width: 250.0,
+        backgroundColor: Colors.white,
+        child: ListView(
+          padding: EdgeInsets.all(0.0),
+          children: [
+            UserAccountsDrawerHeader(
+              arrowColor: Colors.black,
+              accountName: Text("bilal.kar"),
+              accountEmail: Text(
+                "bilal.kar@gmail.com",
+              ),
+              currentAccountPicture: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(
+                    100.0,
+                  ),
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                      "https://www.karamanmagazin.com/images/haberler/2020/07/karaman-in-gururu-yine-basari-dan.gif",
+                    ),
+                  ),
+                ),
+              ),
+              decoration: BoxDecoration(
+                color: Colors.orangeAccent,
+              ),
+            ),
+            ListTile(
+              title: Text("My Orders"),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text("My Coupons"),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text("Settings"),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text("Log Out"),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: activeContentNo,
         unselectedItemColor: Colors.grey,
