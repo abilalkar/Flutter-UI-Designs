@@ -21,128 +21,284 @@ class _CategoriesState extends State<Categories> {
 
     if (widget.categories == "milk") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     } else if (widget.categories == "chocolate") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     } else if (widget.categories == "walter white") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     } else if (widget.categories == "kid named finger") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     } else if (widget.categories == "saul gooddamn") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     } else if (widget.categories == "kim wrexler") {
       listToShow = [
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
-        productCard("Milk", 3,
-            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard(
+          "${widget.categories}0",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+          isAvailable: true,
+        ),
+        productCard(
+          "${widget.categories}1",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}2",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}3",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}4",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}5",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}6",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
+        productCard(
+          "${widget.categories}7",
+          3,
+          "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg",
+        ),
       ];
     }
   }
 
-  Widget productCard(String name, double price, String imageLink) {
+  Widget productCard(String name, double price, String imageLink,
+      {bool isAvailable = false}) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProductDetail(),
+            builder: (context) => ProductDetail(
+              name: name,
+              price: price,
+              imageLink: imageLink,
+              isAvailable: isAvailable,
+            ),
           ),
         );
       },
@@ -161,14 +317,17 @@ class _CategoriesState extends State<Categories> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 60.0,
-              width: 110.0,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10.0),
-                image: DecorationImage(
-                  image: NetworkImage(imageLink),
-                  fit: BoxFit.cover,
+            Hero(
+              tag: name,
+              child: Container(
+                height: 60.0,
+                width: 110.0,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(
+                    image: NetworkImage(imageLink),
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),

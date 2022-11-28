@@ -3,7 +3,18 @@
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatelessWidget {
-  const ProductDetail({super.key});
+  final String name;
+  final double price;
+  final String imageLink;
+  final bool isAvailable;
+
+  ProductDetail({
+    super.key,
+    required this.name,
+    required this.price,
+    required this.imageLink,
+    required this.isAvailable,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +23,11 @@ class ProductDetail extends StatelessWidget {
         children: [
           Stack(
             children: [
-              Image.network(
-                  "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+              Hero(
+                  tag: name,
+                  child: Image.network(
+                    imageLink,
+                  )),
               BackButton(
                 color: Colors.blueAccent,
               ),
@@ -25,7 +39,7 @@ class ProductDetail extends StatelessWidget {
                 height: 18.0,
               ),
               Text(
-                "Product Name",
+                name,
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -35,7 +49,7 @@ class ProductDetail extends StatelessWidget {
                 height: 10.0,
               ),
               Text(
-                "Price",
+                "$price\$",
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -61,18 +75,27 @@ class ProductDetail extends StatelessWidget {
                 width: MediaQuery.of(context).size.width - 50,
                 height: 50.0,
                 decoration: BoxDecoration(
-                  color: Colors.redAccent,
+                  color: isAvailable ? Colors.redAccent : Colors.grey,
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: Center(
-                  child: Text(
-                    "Add to Cart",
-                    style: TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                  ),
+                  child: isAvailable
+                      ? Text(
+                          "Add to Cart",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        )
+                      : Text(
+                          "Not in Stock",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
                 ),
               ),
             ],
