@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design_the_third/product_detail.dart';
 
 class Categories extends StatefulWidget {
   final String categories;
@@ -134,54 +135,64 @@ class _CategoriesState extends State<Categories> {
   }
 
   Widget productCard(String name, double price, String imageLink) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: Colors.white,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            blurRadius: 3.0,
-            spreadRadius: 2.0,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProductDetail(),
           ),
-        ],
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            height: 60.0,
-            width: 110.0,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.0),
-              image: DecorationImage(
-                image: NetworkImage(imageLink),
-                fit: BoxFit.cover,
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 3.0,
+              spreadRadius: 2.0,
+            ),
+          ],
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 60.0,
+              width: 110.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                image: DecorationImage(
+                  image: NetworkImage(imageLink),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 10.0,
-          ),
-          Text(
-            name,
-            style: TextStyle(
-              fontSize: 12.0,
-              fontWeight: FontWeight.bold,
+            SizedBox(
+              height: 10.0,
             ),
-          ),
-          SizedBox(
-            height: 4.0,
-          ),
-          Text(
-            "$price\$",
-            style: TextStyle(
-              fontSize: 12.0,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 146, 50, 43),
+            Text(
+              name,
+              style: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ],
+            SizedBox(
+              height: 4.0,
+            ),
+            Text(
+              "$price\$",
+              style: TextStyle(
+                fontSize: 12.0,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 146, 50, 43),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
