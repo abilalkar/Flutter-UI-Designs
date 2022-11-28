@@ -18,95 +18,172 @@ class _CategoriesState extends State<Categories> {
 
     if (widget.categories == "milk") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     } else if (widget.categories == "chocolate") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     } else if (widget.categories == "walter white") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     } else if (widget.categories == "kid named finger") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     } else if (widget.categories == "saul gooddamn") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     } else if (widget.categories == "kim wrexler") {
       listToShow = [
-        Container(
-          color: Colors.red,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.blue,
-        ),
-        Container(
-          color: Colors.red,
-        ),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
+        productCard("Milk", 3,
+            "https://cdn.pixabay.com/photo/2021/03/22/13/48/copyright-6114655_960_720.jpg"),
       ];
     }
+  }
+
+  Widget productCard(String name, double price, String imageLink) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 3.0,
+            spreadRadius: 2.0,
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            height: 60.0,
+            width: 110.0,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              image: DecorationImage(
+                image: NetworkImage(imageLink),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10.0,
+          ),
+          Text(
+            name,
+            style: TextStyle(
+              fontSize: 12.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 4.0,
+          ),
+          Text(
+            "$price\$",
+            style: TextStyle(
+              fontSize: 12.0,
+              fontWeight: FontWeight.bold,
+              color: Color.fromARGB(255, 146, 50, 43),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
