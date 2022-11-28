@@ -17,7 +17,7 @@ class _ProductsState extends State<Products>
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 10, vsync: this);
+    controller = TabController(length: 6, vsync: this);
   }
 
   @override
