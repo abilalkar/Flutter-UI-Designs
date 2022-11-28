@@ -1,4 +1,4 @@
-import 'dart:math';
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 
@@ -79,7 +79,7 @@ class ShoppingCart extends StatelessWidget {
   }
 
   ListTile checkBuilder(String productName, int pieces, double price) {
-    final double Finalprice = price * pieces;
+    final double finalPrice = price * pieces;
     return ListTile(
       title: Text(
         productName,
@@ -88,7 +88,7 @@ class ShoppingCart extends StatelessWidget {
         "$pieces X $price\$",
       ),
       trailing: Text(
-        "$Finalprice\$",
+        "$finalPrice\$",
       ),
     );
   }

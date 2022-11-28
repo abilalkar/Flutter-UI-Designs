@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:ui_design_the_third/categories.dart';
 
@@ -14,7 +16,6 @@ class _ProductsState extends State<Products>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller = TabController(length: 10, vsync: this);
   }
