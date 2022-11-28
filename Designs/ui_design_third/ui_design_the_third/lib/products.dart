@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design_the_third/categories.dart';
 
 class Products extends StatefulWidget {
   const Products({super.key});
@@ -28,86 +29,39 @@ class _ProductsState extends State<Products>
           labelColor: Colors.black,
           unselectedLabelColor: Colors.grey,
           isScrollable: true,
+          labelStyle: TextStyle(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w500,
+          ),
           tabs: [
             Tab(
               child: Text(
                 "milk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
               ),
             ),
             Tab(
               child: Text(
                 "chocolates",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
               ),
             ),
             Tab(
               child: Text(
                 "walter white",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
               ),
             ),
             Tab(
               child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
+                "kid named finger",
               ),
             ),
             Tab(
               child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
+                "saul gooddamn",
               ),
             ),
             Tab(
               child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            Tab(
-              child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            Tab(
-              child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            Tab(
-              child: Text(
-                "idk",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FontWeight.w500,
-                ),
+                "kim wrexler",
               ),
             ),
           ],
@@ -116,14 +70,23 @@ class _ProductsState extends State<Products>
           child: TabBarView(
             controller: controller,
             children: [
-              Container(
-                color: Colors.blueGrey,
+              Categories(
+                categories: "milk",
               ),
-              Container(
-                color: Colors.redAccent,
+              Categories(
+                categories: "chocolate",
               ),
-              Container(
-                color: Colors.blueGrey,
+              Categories(
+                categories: "walter white",
+              ),
+              Categories(
+                categories: "kid named finger",
+              ),
+              Categories(
+                categories: "saul gooddamn",
+              ),
+              Categories(
+                categories: "kim wrexler",
               ),
             ],
           ),
