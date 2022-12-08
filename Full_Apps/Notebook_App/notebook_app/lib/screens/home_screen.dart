@@ -43,40 +43,48 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20.0,
             ),
-            StreamBuilder<QuerySnapshot>(
-              builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
-                if (snapshot.connectionState == ConnectionState.waiting) {
-                  return Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-                if (snapshot.hasData) {
-                  return GridView(
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
+            Expanded(
+              child: StreamBuilder<QuerySnapshot>(
+                builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                  if (snapshot.connectionState == ConnectionState.waiting) {
+                    return Center(
+                      child: CircularProgressIndicator(),
+                    );
+                  }
+                  if (snapshot.hasData) {
+                    return GridView(
+                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                      ),
+                      children: snapshot.data!.docs
+                          .map(
+                            (note) => noteCard(
+                              () {},
+                              note,
+                            ),
+                          )
+                          .toList(),
+                    );
+                  }
+                  return Text(
+                    "No notes until now",
+                    style: GoogleFonts.nunito(
+                      color: Colors.white,
                     ),
-                    children: snapshot.data!.docs
-                        .map(
-                          (note) => noteCard(
-                            () {},
-                            note,
-                          ),
-                        )
-                        .toList(),
                   );
-                }
-                return Text(
-                  "No notes until now",
-                  style: GoogleFonts.nunito(
-                    color: Colors.white,
-                  ),
-                );
-              },
-              stream:
-                  FirebaseFirestore.instance.collection("Notes").snapshots(),
+                },
+                stream:
+                    FirebaseFirestore.instance.collection("Notes").snapshots(),
+              ),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        label: Text("add notes"),
+        icon: Icon(Icons.add),
+        //extendedPadding: EdgeInsets.all(10.0),
       ),
     );
   }
