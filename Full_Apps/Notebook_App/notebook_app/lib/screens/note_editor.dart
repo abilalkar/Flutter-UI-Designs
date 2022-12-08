@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:notebook_app/style/app_style.dart';
@@ -74,18 +73,18 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         onPressed: () async {
           FirebaseFirestore.instance.collection("Notes").add(
             {
-              "note_title": _titleController,
+              "note_title": _titleController.text,
               "creation_date": date,
-              "note_content": _mainController,
+              "note_content": _mainController.text,
               "color_id": colorID,
             },
           ).then(
             (value) {
-              print(value.id);
+              debugPrint(value.id);
               Navigator.pop(context);
             },
           ).catchError(
-            (error) => print("failed to add new note due to $error"),
+            (error) => debugPrint("failed to add new note due to $error"),
           );
         },
         child: Icon(Icons.save),
