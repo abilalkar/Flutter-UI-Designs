@@ -20,29 +20,32 @@ Widget noteCard(Function()? onTap, QueryDocumentSnapshot doc) {
           8.0,
         ),
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            doc["note_title"],
-            style: AppStyle.mainTitle,
-          ),
-          SizedBox(
-            height: 4.0,
-          ),
-          Text(
-            doc["creation_date"],
-            style: AppStyle.dataTitle,
-          ),
-          SizedBox(
-            height: 4.0,
-          ),
-          Text(
-            doc["note_content"],
-            style: AppStyle.mainContent,
-            overflow: TextOverflow.ellipsis,
-          )
-        ],
+      child: Padding(
+        padding: EdgeInsets.all(6.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              doc["note_title"],
+              style: AppStyle.mainTitle,
+            ),
+            SizedBox(
+              height: 4.0,
+            ),
+            Text(
+              doc["creation_date"],
+              style: AppStyle.dataTitle,
+            ),
+            SizedBox(
+              height: 4.0,
+            ),
+            Text(
+              doc["note_content"],
+              style: AppStyle.mainContent,
+              overflow: TextOverflow.ellipsis,
+            )
+          ],
+        ),
       ),
     ),
   );
