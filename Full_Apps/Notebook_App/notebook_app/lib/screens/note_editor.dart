@@ -85,9 +85,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
               Navigator.pop(context);
             },
           ).catchError(
-            (error) {
-              print("failed to add new note due to $error");
-            },
+            (error) => print("failed to add new note due to $error"),
           );
         },
         child: Icon(Icons.save),
