@@ -44,39 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBOCBF3KSDZRP21RTwJs0rfVBURRenOa0Y',
-    appId: '1:97678584490:web:d92fd1f67c97926b70fed3',
-    messagingSenderId: '97678584490',
-    projectId: 'flutterfirenotes-14037',
-    authDomain: 'flutterfirenotes-14037.firebaseapp.com',
-    storageBucket: 'flutterfirenotes-14037.appspot.com',
+    apiKey: 'AIzaSyASeTyMe91NsN9BWcOE5nFnk3e-CS2t_nE',
+    appId: '1:851734895600:web:c0d6d2a0d60b04e8b8db35',
+    messagingSenderId: '851734895600',
+    projectId: 'dreamapp-1872c',
+    authDomain: 'dreamapp-1872c.firebaseapp.com',
+    storageBucket: 'dreamapp-1872c.appspot.com',
+    measurementId: 'G-ESVFSGHVN0',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyATVClHaHqSkTYT5XHCTJ2scuk90f9CJqY',
-    appId: '1:97678584490:android:90ff45df53d42e7e70fed3',
-    messagingSenderId: '97678584490',
-    projectId: 'flutterfirenotes-14037',
-    storageBucket: 'flutterfirenotes-14037.appspot.com',
+    apiKey: 'AIzaSyAeRqylYYAaUW2_lD9zWibPd2375r1lh9c',
+    appId: '1:851734895600:android:df76107564a15920b8db35',
+    messagingSenderId: '851734895600',
+    projectId: 'dreamapp-1872c',
+    storageBucket: 'dreamapp-1872c.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyCkiR7xDA5TuIZE19_Fod1jdWgmL_SKJP4',
-    appId: '1:97678584490:ios:90991a26e495922870fed3',
-    messagingSenderId: '97678584490',
-    projectId: 'flutterfirenotes-14037',
-    storageBucket: 'flutterfirenotes-14037.appspot.com',
-    iosClientId: '97678584490-d6te34m4e4sla77onk8valcm6lrd63lp.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBgiuxgv5bQAT8CSKtzetaNCzeolP9r58U',
+    appId: '1:851734895600:ios:a6cd8a6e291c9358b8db35',
+    messagingSenderId: '851734895600',
+    projectId: 'dreamapp-1872c',
+    storageBucket: 'dreamapp-1872c.appspot.com',
+    iosClientId: '851734895600-elg2d1go283l8b6toipv9jchqhhvadq9.apps.googleusercontent.com',
     iosBundleId: 'com.example.notebookApp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyCkiR7xDA5TuIZE19_Fod1jdWgmL_SKJP4',
-    appId: '1:97678584490:ios:90991a26e495922870fed3',
-    messagingSenderId: '97678584490',
-    projectId: 'flutterfirenotes-14037',
-    storageBucket: 'flutterfirenotes-14037.appspot.com',
-    iosClientId: '97678584490-d6te34m4e4sla77onk8valcm6lrd63lp.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBgiuxgv5bQAT8CSKtzetaNCzeolP9r58U',
+    appId: '1:851734895600:ios:a6cd8a6e291c9358b8db35',
+    messagingSenderId: '851734895600',
+    projectId: 'dreamapp-1872c',
+    storageBucket: 'dreamapp-1872c.appspot.com',
+    iosClientId: '851734895600-elg2d1go283l8b6toipv9jchqhhvadq9.apps.googleusercontent.com',
     iosBundleId: 'com.example.notebookApp',
   );
 }
