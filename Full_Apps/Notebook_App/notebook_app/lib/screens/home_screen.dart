@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:notebook_app/screens/note_reader.dart';
 import 'package:notebook_app/style/app_style.dart';
 import 'package:notebook_app/widgets/note_card.dart';
 
@@ -59,7 +60,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: snapshot.data!.docs
                           .map(
                             (note) => noteCard(
-                              () {},
+                              () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        NoteReaderScreen(note),
+                                  ),
+                                );
+                              },
                               note,
                             ),
                           )
