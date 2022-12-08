@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notebook_app/style/app_style.dart';
+import 'package:notebook_app/widgets/note_card.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -28,6 +29,8 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
+          //verticalDirection: VerticalDirection.down,
+          //mainAxisSize: MainAxisSize.min,
           children: [
             Text(
               "Your Recent Notes",
@@ -41,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20.0,
             ),
             StreamBuilder<QuerySnapshot>(
-              builder: (context, AsyncSnapshot snapshot) {
+              builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
                 if (snapshot.connectionState == ConnectionState.waiting) {
                   return Center(
                     child: CircularProgressIndicator(),
@@ -49,8 +52,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 }
                 if (snapshot.hasData) {
                   return GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2));
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 2,
+                    ),
+                    children: snapshot.data!.docs
+                        .map(
+                          (note) => noteCard(
+                            () {},
+                            note,
+                          ),
+                        )
+                        .toList(),
+                  );
                 }
                 return Text(
                   "No notes until now",
