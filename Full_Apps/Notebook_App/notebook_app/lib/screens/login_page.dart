@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notebook_app/screens/home_screen.dart';
+import 'package:notebook_app/style/app_style.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -29,25 +30,25 @@ class _LoginPageState extends State<LoginPage> {
                 Expanded(
                   child: Container(
                     height: 120,
-                    width: 60,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 1, 125),
+                      color: AppStyle.themeColors[1],
                     ),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     height: 60,
-                    width: 220,
-                    decoration:
-                        BoxDecoration(color: Color.fromARGB(255, 4, 15, 102)),
+                    decoration: BoxDecoration(
+                      color: AppStyle.themeColors[2],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    decoration:
-                        BoxDecoration(color: Color.fromARGB(255, 129, 25, 113)),
-                    height: 200,
+                    decoration: BoxDecoration(
+                      color: AppStyle.themeColors[3],
+                    ),
+                    height: 180,
                   ),
                 )
               ],
@@ -132,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         );
                       },
-                      child: Container(
+                      child: SizedBox(
                         height: 50,
                         width: 150,
                         child: Center(
@@ -153,26 +154,26 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 Expanded(
                   child: Container(
-                    decoration:
-                        BoxDecoration(color: Color.fromARGB(255, 129, 25, 113)),
-                    height: 200,
+                    height: 180,
+                    decoration: BoxDecoration(
+                      color: AppStyle.themeColors[3],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: Container(
                     height: 60,
-                    width: 220,
-                    decoration:
-                        BoxDecoration(color: Color.fromARGB(255, 4, 15, 102)),
+                    decoration: BoxDecoration(
+                      color: AppStyle.themeColors[2],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    height: 120,
-                    width: 60,
                     decoration: BoxDecoration(
-                      color: Color.fromARGB(255, 34, 1, 125),
+                      color: AppStyle.themeColors[1],
                     ),
+                    height: 120,
                   ),
                 ),
               ],
