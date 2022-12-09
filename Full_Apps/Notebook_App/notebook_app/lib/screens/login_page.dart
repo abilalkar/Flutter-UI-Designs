@@ -15,9 +15,9 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
+    //var height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: Colors.black,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -67,12 +67,14 @@ class _LoginPageState extends State<LoginPage> {
                         color: Colors.white),
                   ),
                   TextField(
-                    decoration: custominputdecoration(
+                    style: TextStyle(color: Colors.white),
+                    decoration: customInputDecoration(
                         "kullanıcı adı", Colors.white, Colors.white),
                   ),
                   space15(),
                   TextField(
-                    decoration: custominputdecoration(
+                    style: TextStyle(color: Colors.white),
+                    decoration: customInputDecoration(
                         "şifre", Colors.white, Colors.white),
                   ),
                   space15(),
@@ -124,7 +126,14 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Center(
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomeScreen(),
+                          ),
+                        );
+                      },
                       child: Container(
                         height: 50,
                         width: 150,
@@ -182,13 +191,18 @@ class _LoginPageState extends State<LoginPage> {
         height: 15,
       );
 
-  InputDecoration custominputdecoration(
+  InputDecoration customInputDecoration(
       String hintText, Color firstColor, Color secondColor) {
     return InputDecoration(
+      counterStyle: TextStyle(color: Colors.red),
       hintText: hintText,
       hintStyle: TextStyle(
-        color: Color.fromARGB(255, 255, 255, 255),
+        color: Colors.white,
       ),
+      /*fillColor: Colors.red,
+      focusColor: Colors.red,
+      hoverColor: Colors.red,
+      iconColor: Colors.red,*/
       enabledBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: firstColor),
       ),
