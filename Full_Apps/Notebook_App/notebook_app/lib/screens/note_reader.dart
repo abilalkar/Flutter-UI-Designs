@@ -2,6 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:notebook_app/screens/login_page.dart';
 import 'package:notebook_app/screens/note_editor.dart';
 import 'package:notebook_app/style/app_style.dart';
 import 'package:pixelarticons/pixel.dart';
@@ -54,12 +55,12 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppStyle.accentColor,
         onPressed: () {
-          /*Navigator.push(
+          Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => NoteEditorScreen(),
+              builder: (context) => LoginPage(),
             ),
-          );*/
+          );
         },
         child: Icon(Pixel.edit),
       ),
