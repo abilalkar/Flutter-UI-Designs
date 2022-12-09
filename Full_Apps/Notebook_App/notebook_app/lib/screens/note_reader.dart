@@ -54,12 +54,12 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppStyle.accentColor,
         onPressed: () {
-          Navigator.push(
+          /*Navigator.push(
             context,
             MaterialPageRoute(
               builder: (context) => NoteEditorScreen(),
             ),
-          );
+          );*/
         },
         child: Icon(Pixel.edit),
       ),
