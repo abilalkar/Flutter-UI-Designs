@@ -49,6 +49,27 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppStyle.accentColor,
+        onPressed: () {
+          /*FirebaseFirestore.instance.collection("Notes").add(
+            {
+              "note_title": _titleController.text,
+              "creation_date": date,
+              "note_content": _mainController.text,
+              "color_id": colorID,
+            },
+          ).then(
+            (value) {
+              debugPrint(value.id);
+              Navigator.pop(context);
+            },
+          ).catchError(
+            (error) => debugPrint("failed to add new note due to $error"),
+          );*/
+        },
+        child: Icon(Icons.edit),
+      ),
     );
   }
 }
