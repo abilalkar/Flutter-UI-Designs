@@ -17,7 +17,7 @@ Widget noteCard(Function()? onTap, QueryDocumentSnapshot doc) {
       decoration: BoxDecoration(
         color: AppStyle.cardColors[doc['color_id']],
         borderRadius: BorderRadius.circular(
-          8.0,
+          0.0,
         ),
       ),
       child: Padding(

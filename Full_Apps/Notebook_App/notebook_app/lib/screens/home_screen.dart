@@ -7,6 +7,7 @@ import 'package:notebook_app/screens/note_editor.dart';
 import 'package:notebook_app/screens/note_reader.dart';
 import 'package:notebook_app/style/app_style.dart';
 import 'package:notebook_app/widgets/note_card.dart';
+import 'package:pixelarticons/pixelarticons.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -90,6 +91,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
         onPressed: () {
           Navigator.push(
             context,
@@ -102,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
           "add notes",
           style: GoogleFonts.vt323(color: Colors.white, fontSize: 20.0),
         ),
-        icon: Icon(Icons.add),
+        icon: Icon(Pixel.addbox),
         //extendedPadding: EdgeInsets.all(10.0),
       ),
     );

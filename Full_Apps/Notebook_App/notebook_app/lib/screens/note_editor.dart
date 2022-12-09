@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:notebook_app/style/app_style.dart';
+import 'package:pixelarticons/pixel.dart';
 
 class NoteEditorScreen extends StatefulWidget {
   const NoteEditorScreen({super.key});
@@ -69,6 +70,9 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadius.zero,
+        ),
         backgroundColor: AppStyle.accentColor,
         onPressed: () async {
           FirebaseFirestore.instance.collection("Notes").add(
@@ -87,7 +91,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen> {
             (error) => debugPrint("failed to add new note due to $error"),
           );
         },
-        child: Icon(Icons.save),
+        child: Icon(Pixel.save),
       ),
     );
   }

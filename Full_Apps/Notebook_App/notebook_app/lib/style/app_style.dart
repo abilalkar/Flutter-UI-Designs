@@ -19,16 +19,16 @@ class AppStyle {
     Colors.blueGrey.shade100,
   ];
 
-  static TextStyle mainTitle = GoogleFonts.roboto(
-    fontSize: 18.0,
+  static TextStyle mainTitle = GoogleFonts.vt323(
+    fontSize: 26.0,
     fontWeight: FontWeight.bold,
   );
-  static TextStyle mainContent = GoogleFonts.nunito(
-    fontSize: 14.0,
+  static TextStyle mainContent = GoogleFonts.vt323(
+    fontSize: 22.0,
     fontWeight: FontWeight.normal,
   );
-  static TextStyle dataTitle = GoogleFonts.roboto(
-    fontSize: 13.0,
+  static TextStyle dataTitle = GoogleFonts.vt323(
+    fontSize: 18.0,
     fontWeight: FontWeight.w500,
   );
   static TextStyle pixelated = GoogleFonts.pressStart2p(

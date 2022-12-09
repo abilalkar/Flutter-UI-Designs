@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:notebook_app/screens/note_editor.dart';
 import 'package:notebook_app/style/app_style.dart';
+import 'package:pixelarticons/pixel.dart';
 
 class NoteReaderScreen extends StatefulWidget {
   NoteReaderScreen(this.doc, {super.key});
@@ -60,7 +61,7 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
             ),
           );
         },
-        child: Icon(Icons.edit),
+        child: Icon(Pixel.edit),
       ),
     );
   }

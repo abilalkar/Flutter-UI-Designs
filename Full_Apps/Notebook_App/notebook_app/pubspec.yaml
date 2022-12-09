@@ -41,6 +41,7 @@ dependencies:
   #firebase_core: ^1.10.2
   firebase_core: ^2.3.0
   google_fonts: ^3.0.1 
+  pixelarticons: ^0.4.0
 
 dev_dependencies:
   flutter_test:
