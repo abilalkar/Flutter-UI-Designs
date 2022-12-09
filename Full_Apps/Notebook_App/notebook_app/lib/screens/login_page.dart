@@ -3,6 +3,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:notebook_app/screens/home_screen.dart';
 
 class LoginPage extends StatefulWidget {
@@ -61,10 +62,8 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Text(
                     "Merhaba, \nhoşgeldin.",
-                    style: TextStyle(
-                        fontSize: 33.0,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
+                    style:
+                        GoogleFonts.vt323(color: Colors.white, fontSize: 26.0),
                   ),
                   TextField(
                     style: TextStyle(color: Colors.white),
@@ -89,10 +88,8 @@ class _LoginPageState extends State<LoginPage> {
                         child: Center(
                           child: Text(
                             "Şifremi unuttum",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 19,
-                                fontWeight: FontWeight.w400),
+                            style: GoogleFonts.vt323(
+                                color: Colors.white, fontSize: 26.0),
                           ),
                         ),
                       ),
@@ -118,7 +115,8 @@ class _LoginPageState extends State<LoginPage> {
                         child: Center(
                           child: Text(
                             "Giriş Yap",
-                            style: TextStyle(color: Colors.white, fontSize: 19),
+                            style: GoogleFonts.vt323(
+                                color: Colors.white, fontSize: 26.0),
                           ),
                         ),
                       ),
@@ -140,10 +138,8 @@ class _LoginPageState extends State<LoginPage> {
                         child: Center(
                           child: Text(
                             "Kayıt Ol",
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 255, 255, 255),
-                                fontSize: 19,
-                                fontWeight: FontWeight.w500),
+                            style: GoogleFonts.vt323(
+                                color: Colors.white, fontSize: 26.0),
                           ),
                         ),
                       ),
@@ -196,9 +192,7 @@ class _LoginPageState extends State<LoginPage> {
     return InputDecoration(
       counterStyle: TextStyle(color: Colors.red),
       hintText: hintText,
-      hintStyle: TextStyle(
-        color: Colors.white,
-      ),
+      hintStyle: GoogleFonts.vt323(color: Colors.white, fontSize: 26.0),
       /*fillColor: Colors.red,
       focusColor: Colors.red,
       hoverColor: Colors.red,
