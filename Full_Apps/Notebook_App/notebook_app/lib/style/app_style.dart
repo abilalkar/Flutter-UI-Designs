@@ -10,8 +10,8 @@ class AppStyle {
 
   static List<Color> themeColors = [
     Color.fromARGB(255, 7, 21, 101),
-    Color.fromARGB(255, 7, 21, 101),
-    Color.fromARGB(255, 7, 21, 101),
+    Color.fromARGB(255, 65, 7, 101),
+    Color.fromARGB(255, 40, 7, 101),
   ];
 
   static List<Color> cardColors = [
