@@ -21,14 +21,44 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: height * .30,
-              decoration: BoxDecoration(
-                  /*image: DecorationImage(
-                  fit: BoxFit.cover,
-                  image: AssetImage("assets/images/foto22.png"),
-                ),*/
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Container(
+                    height: 120,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurpleAccent,
+                    ),
                   ),
+                ),
+                Container(
+                  height: 40,
+                  width: 40,
+                  decoration: BoxDecoration(color: Colors.purple),
+                ),
+                Expanded(
+                  child: Container(
+                    height: 60,
+                    width: 220,
+                    decoration:
+                        BoxDecoration(color: Color.fromARGB(255, 42, 4, 49)),
+                  ),
+                ),
+                Container(
+                  height: 110,
+                  width: 45,
+                  decoration: BoxDecoration(color: Colors.blue),
+                ),
+                Expanded(
+                  child: Container(
+                    decoration:
+                        BoxDecoration(color: Color.fromARGB(255, 90, 103, 104)),
+                    height: 200,
+                  ),
+                )
+              ],
             ),
             SizedBox(
               height: 25,
@@ -94,7 +124,6 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                     ),
                   ),
-                  space15(),
                   Center(
                     child: TextButton(
                       onPressed: () {},
