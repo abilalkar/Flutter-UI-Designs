@@ -2,6 +2,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:notebook_app/screens/note_editor.dart';
 import 'package:notebook_app/style/app_style.dart';
 
 class NoteReaderScreen extends StatefulWidget {
@@ -52,21 +53,12 @@ class _NoteReaderScreenState extends State<NoteReaderScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: AppStyle.accentColor,
         onPressed: () {
-          /*FirebaseFirestore.instance.collection("Notes").add(
-            {
-              "note_title": _titleController.text,
-              "creation_date": date,
-              "note_content": _mainController.text,
-              "color_id": colorID,
-            },
-          ).then(
-            (value) {
-              debugPrint(value.id);
-              Navigator.pop(context);
-            },
-          ).catchError(
-            (error) => debugPrint("failed to add new note due to $error"),
-          );*/
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => NoteEditorScreen(),
+            ),
+          );
         },
         child: Icon(Icons.edit),
       ),

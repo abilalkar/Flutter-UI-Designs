@@ -22,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppStyle.mainColor,
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("FireNotes"),
+        title: Text(
+          "Dream App",
+          style: GoogleFonts.vt323(color: Colors.white, fontSize: 26.0),
+        ),
         centerTitle: true,
         backgroundColor: AppStyle.bgColor,
       ),
@@ -36,11 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text(
               "Your Recent Notes",
-              style: GoogleFonts.roboto(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0,
-              ),
+              style: GoogleFonts.vt323(color: Colors.white, fontSize: 28.0),
             ),
             SizedBox(
               height: 20.0,
@@ -99,7 +98,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         },
-        label: Text("add notes"),
+        label: Text(
+          "add notes",
+          style: GoogleFonts.vt323(color: Colors.white, fontSize: 20.0),
+        ),
         icon: Icon(Icons.add),
         //extendedPadding: EdgeInsets.all(10.0),
       ),

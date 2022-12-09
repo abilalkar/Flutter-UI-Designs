@@ -31,4 +31,8 @@ class AppStyle {
     fontSize: 13.0,
     fontWeight: FontWeight.w500,
   );
+  static TextStyle pixelated = GoogleFonts.pressStart2p(
+    fontSize: 18.0,
+    fontWeight: FontWeight.w500,
+  );
 }
